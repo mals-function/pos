@@ -35,8 +35,11 @@ jobs:
       - name: Set up Node.js 22 (LTS)
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '22.x'
           cache: 'npm'
+
+      - name: Verify Node Version
+        run: node -v && npm -v
 
       # Step 5: Install dependencies
       - name: Install Node Dependencies
