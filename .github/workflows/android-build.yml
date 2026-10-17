@@ -18,12 +18,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Set up Java Development Kit (JDK 17) with built-in Gradle caching
-      - name: Set up JDK 17
+      # Step 2: Set up Java Development Kit (JDK 21) with built-in Gradle caching
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
           cache: 'gradle'
 
       # Step 3: Accept Android SDK Licenses (uses pre-installed Android SDK on GitHub runner)
