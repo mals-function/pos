@@ -17,6 +17,9 @@ import {
   IonSearchbar,
   IonSelect,
   IonSelectOption,
+  IonGrid,
+  IonRow,
+  IonCol,
   useIonToast,
   useIonAlert,
 } from '@ionic/react';
@@ -28,6 +31,7 @@ import {
   cubeOutline,
   trendingUpOutline,
   closeCircleOutline,
+  scanOutline,
 } from 'ionicons/icons';
 import { BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
 import {
@@ -140,6 +144,61 @@ export const InventoryPage: React.FC = () => {
       }
     } catch (err: any) {
       presentToast({ message: `Scan error: ${err.message}`, duration: 2000 });
+    }
+  };
+
+  // Quick Barcode Scanning for Search Bar
+  const handleScanSearchBarcode = async () => {
+    try {
+      const isSupportedResult = await BarcodeScanner.isSupported();
+      if (!isSupportedResult.supported) {
+        presentToast({
+          message: 'Available sa Android device ang camera scanner. I-type ang barcode sa search bar!',
+          duration: 3000,
+          color: 'warning',
+        });
+        return;
+      }
+
+      const { camera } = await BarcodeScanner.requestPermissions();
+      if (camera !== 'granted' && camera !== 'limited') {
+        presentToast({ message: 'Kailangan ng camera permission para mag-scan.', duration: 2500, color: 'danger' });
+        return;
+      }
+
+      const { barcodes } = await BarcodeScanner.scan();
+      const scannedCode = barcodes[0]?.rawValue;
+      if (scannedCode) {
+        setSearchQuery(scannedCode);
+        const match = products.find((p) => p.barcode === scannedCode);
+        if (match) {
+          presentToast({
+            message: `Nahanap ang paninda: ${match.name}!`,
+            duration: 2000,
+            color: 'success',
+            position: 'top',
+          });
+        } else {
+          presentAlert({
+            header: 'Bagong Barcode',
+            message: `Walang nahanap na panindang may barcode na "${scannedCode}". Nais mo ba itong idagdag sa imbentaryo ngayon?`,
+            buttons: [
+              { text: 'Huwag Muna', role: 'cancel' },
+              {
+                text: 'Magdagdag (+)',
+                handler: () => {
+                  setEditingProduct(null);
+                  resetForm();
+                  setBarcode(scannedCode);
+                  setShowModal(true);
+                },
+              },
+            ],
+          });
+        }
+      }
+    } catch (err: any) {
+      presentToast({ message: `Scan error: ${err.message}`, duration: 2500, color: 'warning' });
     }
   };
 
@@ -261,20 +320,66 @@ export const InventoryPage: React.FC = () => {
           </div>
         </IonToolbar>
 
-        {/* Search & Filter Header */}
-        <div style={{ background: '#0f172a', padding: '0 14px 12px 14px' }}>
-          <IonSearchbar
-            value={searchQuery}
-            placeholder="Hanapin sa pangalan o barcode..."
-            onIonInput={(e) => setSearchQuery(e.detail.value || '')}
-            style={{
-              '--background': '#1e293b',
-              '--color': '#fff',
-              '--placeholder-color': '#94a3b8',
-              '--border-radius': '14px',
-              padding: 0,
-            } as React.CSSProperties}
-          />
+        {/* Search & Barcode Scan Bar */}
+        <div style={{ background: '#0f172a', padding: '0 12px 10px 12px' }}>
+          <IonGrid className="ion-no-padding">
+            <IonRow style={{ alignItems: 'center' }}>
+              <IonCol size="9">
+                <IonSearchbar
+                  value={searchQuery}
+                  placeholder="Pangalan o barcode..."
+                  onIonInput={(e) => setSearchQuery(e.detail.value || '')}
+                  style={{
+                    '--background': '#1e293b',
+                    '--color': '#fff',
+                    '--placeholder-color': '#94a3b8',
+                    '--icon-color': '#38bdf8',
+                    '--border-radius': '14px',
+                    padding: 0,
+                  } as React.CSSProperties}
+                />
+              </IonCol>
+              <IonCol size="3" style={{ textAlign: 'right', paddingLeft: '8px' }}>
+                <IonButton
+                  expand="block"
+                  color="success"
+                  onClick={handleScanSearchBarcode}
+                  style={{
+                    '--border-radius': '14px',
+                    height: '44px',
+                    fontWeight: 'bold',
+                    boxShadow: '0 4px 12px rgba(34, 197, 94, 0.3)',
+                  }}
+                >
+                  <IonIcon slot="icon-only" icon={scanOutline} />
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+
+          {/* Active Search Query Clear Tag */}
+          {searchQuery.trim().length > 0 && (
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '6px' }}>
+              <span style={{ fontSize: '0.75rem', color: '#38bdf8', fontWeight: 600 }}>
+                Naka-filter sa: "<b>{searchQuery}</b>"
+              </span>
+              <button
+                onClick={() => setSearchQuery('')}
+                style={{
+                  background: '#334155',
+                  border: 'none',
+                  borderRadius: '6px',
+                  color: '#fff',
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  padding: '2px 8px',
+                  cursor: 'pointer',
+                }}
+              >
+                I-clear ✕
+              </button>
+            </div>
+          )}
 
           {/* Category Chips and Low Stock Filter */}
           <div
