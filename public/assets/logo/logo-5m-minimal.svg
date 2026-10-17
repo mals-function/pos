@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Deep Indigo Navy Gradient -->
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="50%" stop-color="#312E81" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Pinoy Sun Radiance Gradient -->
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <!-- Clean Tech Glow -->
+    <filter id="glowMinimal" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#F59E0B" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- App Squircle Base -->
+  <rect width="512" height="512" rx="115" fill="url(#navyGrad)" />
+
+  <!-- Geometric Grid Accent Circles -->
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="2" />
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" stroke-dasharray="6 6" />
+
+  <!-- Center Storefront Icon & Monogram -->
+  <g transform="translate(256, 230)">
+    <!-- Stylized Modern Store Roof / Chevron -->
+    <path d="M -130 -40 L 0 -120 L 130 -40 L 100 -40 L 0 -100 L -100 -40 Z" fill="url(#sunGrad)" filter="url(#glowMinimal)" />
+
+    <!-- 3 Mini Sun Rays (Philippine Flag 3 Stars / Sun inspiration) -->
+    <circle cx="-50" cy="-125" r="5" fill="#FDE047" />
+    <circle cx="0" cy="-145" r="7" fill="#FDE047" />
+    <circle cx="50" cy="-125" r="5" fill="#FDE047" />
+
+    <!-- Central Minimal 5M Monogram -->
+    <g transform="translate(0, 35)">
+      <!-- Shield / Hexagon Plate -->
+      <rect x="-105" y="-60" width="210" height="120" rx="24" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="2" />
+
+      <!-- Giant 5M text -->
+      <text x="0" y="24" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', sans-serif" 
+            font-size="82" 
+            font-weight="900" 
+            fill="#FFFFFF" 
+            text-anchor="middle" 
+            letter-spacing="-3">
+        <tspan fill="url(#sunGrad)">5</tspan>M
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Brand Subtitle -->
+  <g transform="translate(256, 400)">
+    <!-- Pill Badge -->
+    <rect x="-135" y="-20" width="270" height="40" rx="20" fill="url(#sunGrad)" />
+    <text x="0" y="6" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', sans-serif" 
+          font-size="16" 
+          font-weight="900" 
+          fill="#0F172A" 
+          text-anchor="middle" 
+          letter-spacing="3">SARI-SARI STORE</text>
+  </g>
+</svg>

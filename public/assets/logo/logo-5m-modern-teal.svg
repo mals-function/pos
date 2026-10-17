@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Modern Emerald / Mint Gradient -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#065F46" />
+    </linearGradient>
+
+    <!-- Warm Golden Yellow Accent -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <!-- Clean Soft Drop Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#064E3B" flood-opacity="0.35" />
+    </filter>
+
+    <filter id="softGlow5M" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background App Squircle -->
+  <rect width="512" height="512" rx="118" fill="url(#tealGrad)" />
+
+  <!-- Subtle Circular Ambient Highlights -->
+  <circle cx="256" cy="160" r="180" fill="#FFFFFF" opacity="0.08" />
+  <circle cx="430" cy="80" r="100" fill="#FCD34D" opacity="0.1" />
+
+  <!-- Main Store Emblem Container -->
+  <g filter="url(#cardShadow)">
+    <!-- White Card Base -->
+    <rect x="86" y="110" width="340" height="320" rx="38" fill="#FFFFFF" />
+
+    <!-- Modern Stylized Store Awning Roof -->
+    <g id="modernRoof">
+      <!-- Roof base banner -->
+      <path d="M 86 170 L 116 110 L 396 110 L 426 170 Z" fill="#059669" />
+      
+      <!-- Alternating Modern Stripes -->
+      <path d="M 148 110 L 158 170 L 202 170 L 194 110 Z" fill="#10B981" />
+      <path d="M 238 110 L 244 170 L 288 170 L 282 110 Z" fill="#10B981" />
+      <path d="M 326 110 L 330 170 L 374 170 L 366 110 Z" fill="#10B981" />
+
+      <!-- Roof Top Accent Bar -->
+      <rect x="110" y="106" width="292" height="8" rx="4" fill="url(#goldGrad)" />
+
+      <!-- Scalloped Lower Edge -->
+      <path d="M 86 170 C 103 186 120 186 137 170 C 154 186 171 186 188 170 C 205 186 222 186 239 170 C 256 186 273 186 290 170 C 307 186 324 186 341 170 C 358 186 375 186 392 170 C 409 186 426 186 426 170" 
+            fill="none" stroke="#047857" stroke-width="6" stroke-linecap="round" />
+    </g>
+
+    <!-- Signboard Ribbon: "SARI-SARI STORE" -->
+    <g transform="translate(136, 182)">
+      <rect x="0" y="0" width="240" height="36" rx="10" fill="#064E3B" />
+      <text x="120" y="24" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', sans-serif" 
+            font-size="14" 
+            font-weight="800" 
+            fill="#FCD34D" 
+            text-anchor="middle" 
+            letter-spacing="2.5">SARI-SARI STORE</text>
+    </g>
+
+    <!-- Center Monogram: 5M -->
+    <g id="center5M" transform="translate(256, 312)">
+      <!-- Outer Circle Ring -->
+      <circle cx="0" cy="0" r="66" fill="#F0FDF4" stroke="#D1FAE5" stroke-width="4" />
+      
+      <!-- Core Badge -->
+      <circle cx="0" cy="0" r="54" fill="url(#tealGrad)" />
+
+      <!-- 5M Big Monogram Typography -->
+      <text x="0" y="18" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', sans-serif" 
+            font-size="52" 
+            font-weight="900" 
+            fill="#FFFFFF" 
+            text-anchor="middle" 
+            letter-spacing="-1">5M</text>
+    </g>
+
+    <!-- Floating Shopping Bag and Pinoy Sun Sparkle -->
+    <g transform="translate(136, 290)" opacity="0.95">
+      <!-- Mini Shopping Basket -->
+      <rect x="0" y="10" width="34" height="26" rx="6" fill="#F59E0B" />
+      <path d="M 6 10 C 6 -2 28 -2 28 10" fill="none" stroke="#D97706" stroke-width="3" stroke-linecap="round" />
+    </g>
+
+    <g transform="translate(346, 292)" opacity="0.95">
+      <!-- Verified / Quality Star Badge -->
+      <circle cx="16" cy="16" r="16" fill="#F59E0B" />
+      <text x="16" y="22" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle">★</text>
+    </g>
+
+    <!-- Bottom Neighborhood Tagline -->
+    <text x="256" y="405" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="12" 
+          font-weight="700" 
+          fill="#059669" 
+          text-anchor="middle" 
+          letter-spacing="1.5">ANG TINDAHAN NG BAYAN</text>
+  </g>
+</svg>

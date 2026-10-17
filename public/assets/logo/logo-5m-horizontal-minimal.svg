@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <linearGradient id="hSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <filter id="hGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Left Icon Mark -->
+  <g transform="translate(15, 15)">
+    <rect x="0" y="0" width="120" height="120" rx="30" fill="url(#hNavyGrad)" filter="url(#hGlow)" />
+
+    <!-- Roof Chevron -->
+    <path d="M 25 45 L 60 22 L 95 45 L 85 45 L 60 28 L 35 45 Z" fill="url(#hSunGrad)" />
+
+    <!-- 5M Letters -->
+    <text x="60" y="86" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif" 
+          font-size="40" 
+          font-weight="900" 
+          text-anchor="middle" 
+          letter-spacing="-1">
+      <tspan fill="url(#hSunGrad)">5</tspan><tspan fill="#FFFFFF">M</tspan>
+    </text>
+  </g>
+
+  <!-- Right Typography Section -->
+  <g transform="translate(160, 26)">
+    <!-- Primary Title -->
+    <text x="0" y="48" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', sans-serif" 
+          font-size="46" 
+          font-weight="900" 
+          letter-spacing="-1">
+      <tspan fill="#F59E0B">5M</tspan>
+      <tspan fill="#0F172A" font-weight="800"> SARI-SARI</tspan>
+    </text>
+
+    <!-- Secondary Badge & Tagline -->
+    <g transform="translate(0, 62)">
+      <rect x="0" y="0" width="96" height="24" rx="6" fill="#1E1B4B" />
+      <text x="48" y="17" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="12" 
+            font-weight="800" 
+            fill="#FDE047" 
+            text-anchor="middle" 
+            letter-spacing="2">STORE</text>
+
+      <text x="112" y="17" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="13" 
+            font-weight="600" 
+            fill="#64748B" 
+            letter-spacing="1">PREMIUM DIGITAL TIENDA</text>
+    </g>
+  </g>
+</svg>

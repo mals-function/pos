@@ -12,20 +12,27 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@capacitor-mlkit/barcode-scanning": "^8.2.1",
+    "@capacitor/android": "^8.5.3",
     "@capacitor/app": "8.1.2",
     "@capacitor/core": "8.5.3",
     "@capacitor/haptics": "8.0.2",
     "@capacitor/keyboard": "8.0.6",
+    "@capacitor/network": "^8.0.1",
     "@capacitor/status-bar": "8.0.4",
     "@ionic/react": "^9.0.0",
     "@ionic/react-router": "^9.0.0",
+    "@ionic/storage": "^4.0.0",
+    "firebase": "^13.0.0",
     "ionicons": "^8.1.0",
+    "localforage": "^1.10.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router": "^6.30.0",
     "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "8.5.3",
     "@testing-library/dom": ">=7.21.4",
     "@testing-library/jest-dom": "^5.16.5",

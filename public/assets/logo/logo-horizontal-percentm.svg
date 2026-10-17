@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brandRedPct" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3366" />
+      <stop offset="100%" stop-color="#E6194B" />
+    </linearGradient>
+
+    <linearGradient id="awningYelPct" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD166" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+
+    <filter id="shadowHPct" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#E6194B" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Left Icon Emblem -->
+  <g transform="translate(10, 10)">
+    <rect x="10" y="10" width="120" height="120" rx="30" fill="url(#brandRedPct)" filter="url(#shadowHPct)" />
+
+    <!-- Striped Roof -->
+    <path d="M 28 55 L 42 35 L 56 35 L 46 55 Z" fill="url(#awningYelPct)" />
+    <path d="M 46 55 L 56 35 L 70 35 L 68 55 Z" fill="#FFFFFF" />
+    <path d="M 68 55 L 70 35 L 84 35 L 88 55 Z" fill="url(#awningYelPct)" />
+    <path d="M 88 55 L 84 35 L 98 35 L 112 55 Z" fill="#FFFFFF" />
+
+    <!-- Awning Scallops -->
+    <path d="M 28 55 Q 37 63 46 55 Q 57 63 68 55 Q 78 63 88 55 Q 100 63 112 55" fill="#E65100" stroke="#E65100" stroke-width="2" />
+
+    <!-- Window & Counter -->
+    <rect x="34" y="60" width="72" height="46" rx="8" fill="#FFFFFF" />
+    
+    <!-- Monogram inside store icon -->
+    <text x="70" y="93" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', 'Segoe UI', sans-serif" 
+          font-size="28" 
+          font-weight="900" 
+          fill="#FF3366" 
+          text-anchor="middle" 
+          letter-spacing="-1">%M</text>
+
+    <!-- Sparkle star -->
+    <circle cx="106" cy="30" r="5" fill="#FFE082" />
+  </g>
+
+  <!-- Typography Right Section -->
+  <g transform="translate(160, 20)">
+    <text x="0" y="58" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', 'Segoe UI', sans-serif" 
+          font-size="52" 
+          font-weight="900" 
+          fill="#1E293B" 
+          letter-spacing="-1">
+      <tspan fill="#FF3366">%M</tspan>
+      <tspan fill="#0F172A" font-weight="800" font-size="44"> SARI-SARI</tspan>
+    </text>
+
+    <g transform="translate(0, 72)">
+      <rect x="0" y="0" width="138" height="26" rx="7" fill="#FF9F1C" />
+      <text x="69" y="18" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="13" 
+            font-weight="800" 
+            fill="#FFFFFF" 
+            text-anchor="middle" 
+            letter-spacing="2">STORE</text>
+
+      <text x="154" y="19" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="14" 
+            font-weight="600" 
+            fill="#64748B" 
+            letter-spacing="1.2">• TINDANG PINOY • CONVENIENCE</text>
+    </g>
+  </g>
+</svg>

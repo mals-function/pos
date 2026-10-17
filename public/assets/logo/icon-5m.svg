@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad5M" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF512F" />
+      <stop offset="100%" stop-color="#DD2476" />
+    </linearGradient>
+
+    <!-- Canopy Stripes Gradient -->
+    <linearGradient id="awningYellow5M" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD166" />
+      <stop offset="100%" stop-color="#FF9F1C" />
+    </linearGradient>
+    <linearGradient id="awningWhite5M" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="90%" stop-color="#EDE8E3" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="dropShadow5M" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+    <filter id="softGlow5M" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+
+    <linearGradient id="storeBase5M" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon Squircle Background -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad5M)" />
+
+  <!-- Background Glow -->
+  <circle cx="256" cy="180" r="160" fill="#FFFFFF" opacity="0.08" />
+
+  <!-- Main Store Card Container -->
+  <g filter="url(#dropShadow5M)">
+    <!-- Store White Card Base -->
+    <rect x="96" y="160" width="320" height="240" rx="36" fill="url(#storeBase5M)" />
+
+    <!-- Storefront Glass Window / Display Shelf -->
+    <rect x="120" y="235" width="272" height="135" rx="20" fill="#FFF9F2" stroke="#FFE3C2" stroke-width="3" />
+    
+    <!-- Mini Shelf Goods -->
+    <g opacity="0.85">
+      <rect x="138" y="318" width="16" height="36" rx="4" fill="#FF5722" />
+      <rect x="142" y="312" width="8" height="6" rx="1" fill="#FF8A65" />
+      
+      <rect x="162" y="324" width="22" height="30" rx="3" fill="#FFC107" />
+      <line x1="162" y1="335" x2="184" y2="335" stroke="#FFA000" stroke-width="2" />
+
+      <rect x="192" y="320" width="28" height="34" rx="4" fill="#4CAF50" />
+      <circle cx="206" cy="336" r="6" fill="#81C784" />
+
+      <path d="M140 245 L145 280 L135 280 Z" fill="#E91E63" opacity="0.9" />
+      <path d="M152 245 L157 275 L147 275 Z" fill="#FF9800" opacity="0.9" />
+      <path d="M164 245 L169 282 L159 282 Z" fill="#2196F3" opacity="0.9" />
+      <line x1="130" y1="245" x2="180" y2="245" stroke="#B0BEC5" stroke-width="2" stroke-linecap="round" />
+    </g>
+
+    <!-- Centerpiece: 5M Badge / Monogram Inside Store -->
+    <g id="brandMark5M">
+      <circle cx="310" cy="298" r="46" fill="#FF2A6D" />
+      <circle cx="310" cy="298" r="40" fill="#FFFFFF" />
+
+      <text x="310" y="311" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif" 
+            font-size="36" 
+            font-weight="900" 
+            fill="#FF2A6D" 
+            text-anchor="middle" 
+            letter-spacing="-1">5M</text>
+    </g>
+
+    <!-- Store Awning Roof -->
+    <g id="awning" filter="url(#softGlow5M)">
+      <path d="M 80 155 L 110 100 L 150 100 L 132 155 Z" fill="url(#awningYellow5M)" />
+      <path d="M 132 155 L 150 100 L 190 100 L 184 155 Z" fill="url(#awningWhite5M)" />
+      <path d="M 184 155 L 190 100 L 230 100 L 236 155 Z" fill="url(#awningYellow5M)" />
+      <path d="M 236 155 L 230 100 L 270 100 L 288 155 Z" fill="url(#awningWhite5M)" />
+      <path d="M 288 155 L 270 100 L 310 100 L 340 155 Z" fill="url(#awningYellow5M)" />
+      <path d="M 340 155 L 310 100 L 350 100 L 392 155 Z" fill="url(#awningWhite5M)" />
+      <path d="M 392 155 L 350 100 L 390 100 L 432 155 Z" fill="url(#awningYellow5M)" />
+
+      <path d="M 105 100 L 395 100" stroke="#FF8F00" stroke-width="4" stroke-linecap="round" />
+
+      <path d="M 80 155 Q 93 175 106 155 Q 119 175 132 155 Q 145 175 158 155 Q 171 175 184 155 Q 197 175 210 155 Q 223 175 236 155 Q 249 175 262 155 Q 275 175 288 155 Q 301 175 314 155 Q 327 175 340 155 Q 353 175 366 155 Q 379 175 392 155 Q 405 175 418 155 Q 425 165 432 155" 
+            fill="#FF8F00" />
+      <path d="M 80 150 Q 93 168 106 150 Q 119 168 132 150 Q 145 168 158 150 Q 171 168 184 150 Q 197 168 210 150 Q 223 168 236 150 Q 249 168 262 150 Q 275 168 288 150 Q 301 168 314 150 Q 327 168 340 150 Q 353 168 366 150 Q 379 168 392 150 Q 405 168 418 150 Q 425 158 432 150" 
+            fill="#FFA000" />
+    </g>
+
+    <!-- Signboard Header Tag -->
+    <g transform="translate(146, 178)">
+      <rect x="0" y="0" width="220" height="42" rx="12" fill="#1E293B" />
+      <rect x="2" y="2" width="216" height="38" rx="10" fill="#0F172A" />
+      <text x="110" y="26" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="15" 
+            font-weight="800" 
+            fill="#FACC15" 
+            text-anchor="middle" 
+            letter-spacing="2">SARI-SARI STORE</text>
+    </g>
+  </g>
+
+  <!-- Sun Star Accent -->
+  <g transform="translate(400, 110)">
+    <circle cx="0" cy="0" r="14" fill="#FACC15" />
+    <path d="M0 -22 L4 -8 L18 -4 L6 4 L8 18 L0 10 L-8 18 L-6 4 L-18 -4 L-4 -8 Z" fill="#FACC15" />
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF" />
+  </g>
+</svg>

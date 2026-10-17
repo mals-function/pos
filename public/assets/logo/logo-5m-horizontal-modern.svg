@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <linearGradient id="hGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <filter id="hShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#064E3B" flood-opacity="0.2" />
+    </filter>
+  </defs>
+
+  <!-- Left Icon Mark -->
+  <g transform="translate(15, 15)">
+    <!-- Squircle Emblem -->
+    <rect x="0" y="0" width="120" height="120" rx="30" fill="url(#hTealGrad)" filter="url(#hShadow)" />
+
+    <!-- Canopy Roof Stripes inside -->
+    <path d="M 20 48 L 34 26 L 86 26 L 100 48 Z" fill="#10B981" />
+    <path d="M 40 26 L 46 48 L 60 48 L 56 26 Z" fill="#FFFFFF" opacity="0.9" />
+    <path d="M 70 26 L 74 48 L 88 48 L 86 26 Z" fill="#FFFFFF" opacity="0.9" />
+    
+    <!-- Roof line -->
+    <line x1="30" y1="26" x2="90" y2="26" stroke="url(#hGoldGrad)" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Store Box -->
+    <rect x="25" y="52" width="70" height="46" rx="10" fill="#FFFFFF" />
+
+    <!-- 5M Letters -->
+    <text x="60" y="87" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif" 
+          font-size="32" 
+          font-weight="900" 
+          fill="#059669" 
+          text-anchor="middle" 
+          letter-spacing="-1">5M</text>
+
+    <!-- Star Accent -->
+    <circle cx="98" cy="22" r="5" fill="#FCD34D" />
+  </g>
+
+  <!-- Right Typography Section -->
+  <g transform="translate(160, 24)">
+    <!-- Primary Title -->
+    <text x="0" y="48" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', sans-serif" 
+          font-size="46" 
+          font-weight="900" 
+          letter-spacing="-1">
+      <tspan fill="#059669">5M</tspan>
+      <tspan fill="#0F172A" font-weight="800"> SARI-SARI</tspan>
+    </text>
+
+    <!-- Secondary Badge & Tagline -->
+    <g transform="translate(0, 62)">
+      <rect x="0" y="0" width="96" height="24" rx="6" fill="#F59E0B" />
+      <text x="48" y="17" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="12" 
+            font-weight="800" 
+            fill="#FFFFFF" 
+            text-anchor="middle" 
+            letter-spacing="2">STORE</text>
+
+      <text x="110" y="17" 
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+            font-size="13" 
+            font-weight="600" 
+            fill="#64748B" 
+            letter-spacing="1">YOUR NEIGHBORHOOD APP</text>
+    </g>
+  </g>
+</svg>
